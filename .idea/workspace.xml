@@ -21,11 +21,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Model.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Model.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/Model.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+            <state relative-caret-position="52">
+              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding>
                 <element signature="e#27#35#0#PHP" expanded="true" />
                 <marker date="1480862626677" expanded="true" signature="401:414" ph="SELECT * FRO... " />
@@ -34,6 +34,16 @@
                 <marker date="1480862626677" expanded="true" signature="668:704" ph="SELECT * FRO... table" />
                 <marker date="1480862626677" expanded="true" signature="668:890" ph="SELECT * FRO... table" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="182">
+              <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -136,7 +146,6 @@
         <option value="$PROJECT_DIR$/public/lib/jquery/1.12.4/jquery.min.js" />
         <option value="$PROJECT_DIR$/public/css/main.css" />
         <option value="$PROJECT_DIR$/core/database/Connection.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/public/app.js" />
         <option value="$PROJECT_DIR$/core/Helper.php" />
         <option value="$PROJECT_DIR$/app/Views/view.php" />
@@ -150,6 +159,7 @@
         <option value="$PROJECT_DIR$/app/Views/home.php" />
         <option value="$PROJECT_DIR$/public/js/app.js" />
         <option value="$PROJECT_DIR$/core/Model.php" />
+        <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
   </component>
@@ -338,12 +348,12 @@
       <updated>1480704565324</updated>
       <workItem from="1480704566970" duration="12394000" />
       <workItem from="1480750911823" duration="48978000" />
-      <workItem from="1480842803355" duration="18999000" />
+      <workItem from="1480842803355" duration="19988000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80371000" />
+    <option name="totallyTimeSpent" value="81360000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1366" height="744" extended-state="6" />
@@ -613,14 +623,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Views/view.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
@@ -733,8 +735,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/core/Model.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+        <state relative-caret-position="52">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding>
             <element signature="e#27#35#0#PHP" expanded="true" />
             <marker date="1480862626677" expanded="true" signature="401:414" ph="SELECT * FRO... " />
@@ -743,6 +745,14 @@
             <marker date="1480862626677" expanded="true" signature="668:704" ph="SELECT * FRO... table" />
             <marker date="1480862626677" expanded="true" signature="668:890" ph="SELECT * FRO... table" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>
