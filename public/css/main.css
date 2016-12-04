@@ -1,0 +1,15 @@
+body {
+    padding-top: 40px;
+}
+.posts p{
+    padding-left: 1px;
+}
+.created-at {
+    margin-bottom: 20px;
+    color: #999;
+}
+footer p {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #999;
+}
