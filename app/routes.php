@@ -3,3 +3,4 @@
 $router->get('', 'PagesController@getHome');
 $router->get('post/([0-9]+)', 'PagesController@getPost@$1');
 $router->post('posts', 'PagesController@postPosts');
+$router->post('post', 'PagesController@postPost');

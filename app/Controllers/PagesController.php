@@ -6,8 +6,6 @@ use App\Core\Controller;
 
 class PagesController extends Controller
 {
-    public static $page;
-
     public function getHome()
     {
         $posts = App::get('dbPost')->selectPartially('posts', 1);
@@ -29,10 +27,19 @@ class PagesController extends Controller
      */
     public function postPosts()
     {
-        static::$page = $_POST['page'];
+        $page = $_POST['page'];
 
-        $posts = App::get('dbPost')->selectPartially('posts', static::$page);
+        $posts = App::get('dbPost')->selectPartially('posts', $page);
 
         echo json_encode($posts);
+    }
+
+    public function postPost()
+    {
+        $postId = $_POST['postId'];
+
+        $post = App::get('dbModel')->selectById('posts', $postId);
+
+        echo json_encode($post);
     }
 }

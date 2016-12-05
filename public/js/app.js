@@ -1,6 +1,9 @@
 $(document).ready(function () {
     var page = 1; // Current page
+
     loadMorePosts(page);
+
+    downloadPostInJson();
 });
 
 function loadMorePosts(page) {
@@ -40,5 +43,25 @@ function checkPageExist(page) {
                 return;
             }
         }
+    });
+}
+function downloadPostInJson() {
+    $('#download_post').click(function () {
+        var postId = $('#post').attr('post-id');
+        $.ajax({
+            type: 'POST',
+            url: '/post',
+            data: {postId: postId},
+            dataType: 'json',
+            success: function (result) {
+                var data = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(result));
+                var element = document.getElementById('download_post');
+                element.setAttribute("href", data);
+                element.setAttribute("download", "post.json");
+                element.click();
+                element.remove();
+                $('#download_btn').append( '<a class="btn btn-primary" id="downloads_post"><span class="glyphicon glyphicon-save">Download</span></a>' );
+            }
+        });
     });
 }
