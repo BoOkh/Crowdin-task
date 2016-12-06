@@ -32,10 +32,17 @@
                     </div>
                     <div id="navbar" class="navbar-collapse collapse">
                         <ul class="nav navbar-nav">
-                            <li class="active"><a href="/">Home</a></li>
+                            <li><a href="/">Home</a></li>
+                            <?php if(isset($_SESSION['admin'])){ ?>
+                                <li><a href="/create">Create post</a></li>
+                            <?php }?>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="/auth"><span class="glyphicon glyphicon-log-in"></span></a></li>
+                            <?php if(isset($_SESSION['admin'])){ ?>
+                                <li><a href="/logout"><span class="glyphicon glyphicon-log-out"> Logout</span></a></li>
+                            <?php } else { ?>
+                                <li><a href="/login"><span class="glyphicon glyphicon-log-in"> Login</span></a></li>
+                            <?php }?>
                         </ul>
                     </div>
                 </div>

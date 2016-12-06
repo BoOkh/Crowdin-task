@@ -15,36 +15,19 @@ class Model
         $this->pdo = $pdo;
     }
 
-    /**
-     * @param string $table <p>Table name</p>
-     * @return mixed <p>Array with data</p>
-     */
-    public function selectAll($table)
-    {
-        try {
-            $sql = $this->pdo->prepare("SELECT * FROM {$table}");
-
-            $sql->execute();
-
-            return $sql->fetchAll();
-        } catch (PDOException $e) {
-            echo $e->getMessage();
-        }
-    }
-
     public function selectById($table, $id)
     {
         try {
             $sql = "SELECT * FROM {$table} WHERE id = :id";
 
-            $sql = $this->pdo->prepare($sql);
+            $statement = $this->pdo->prepare($sql);
 
-            $sql->bindParam(':id', $id, PDO::PARAM_INT);
-            $sql->setFetchMode(PDO::FETCH_ASSOC);
+            $statement->bindParam(':id', $id, PDO::PARAM_INT);
+            $statement->setFetchMode(PDO::FETCH_ASSOC);
 
-            $sql->execute();
+            $statement->execute();
 
-            return $sql->fetch(); //PDO::FETCH_CLASS - inside fetch
+            return $statement->fetch(); //PDO::FETCH_CLASS - inside fetch
         } catch (PDOException $e) {
             echo $e->getMessage();
         }

@@ -7,4 +7,9 @@ class Helper
     {
         return date('F j, Y', strtotime($date));
     }
+
+    public static function redirect($path = '')
+    {
+        header('Location: /' . $path);
+    }
 }

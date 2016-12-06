@@ -17,7 +17,7 @@ class Post extends Model
         $limit = self::SHOW_ON_PAGE;
         $offset = ($page - 1) * self::SHOW_ON_PAGE;
         try {
-            $sql = "SELECT * FROM {$table} LIMIT :limit OFFSET :offset";
+            $sql = "SELECT * FROM {$table} ORDER BY id DESC LIMIT :limit OFFSET :offset";
 
             $statement = $this->pdo->prepare($sql);
 
@@ -31,5 +31,21 @@ class Post extends Model
             echo $e->getMessage();
         }
         return $statement->fetchAll();
+    }
+
+    public function create($title, $short_description, $description)
+    {
+        try {
+            $sql = "INSERT INTO posts (title, short_description, description, created_at) VALUES (:title, :short_description, :description, NOW())";
+            $statement = $this->pdo->prepare($sql);
+
+            $statement->bindParam(':title', $title, PDO::PARAM_STR);
+            $statement->bindParam(':short_description', $short_description, PDO::PARAM_STR);
+            $statement->bindParam(':description', $description, PDO::PARAM_STR);
+
+            return ($statement->execute()) ? true : false;
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+        }
     }
 }
