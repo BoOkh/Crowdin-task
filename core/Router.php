@@ -1,6 +1,6 @@
 <?php
 namespace App\Core;
-
+use Exception;
 /**
  * Class Router
  * @package App\Core

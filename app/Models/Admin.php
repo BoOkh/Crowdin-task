@@ -58,6 +58,15 @@ class Admin extends Model
             if(urldecode($_SERVER['REQUEST_URI']) == '/create') {
                 Helper::redirect();
             }
+
+            if(preg_match('~^/edit/([0-9]+)~', urldecode($_SERVER['REQUEST_URI']))) {
+                Helper::redirect();
+            }
+
+            if(preg_match('~^/delete/([0-9]+)~', urldecode($_SERVER['REQUEST_URI']))) {
+                Helper::redirect();
+                die();
+            }
         }
     }
 
@@ -66,8 +75,7 @@ class Admin extends Model
      */
     public static function logout()
     {
-        unset($_SESSION['admin']);
-        unset($_SESSION['error']);
+        unset($_SESSION['admin'], $_SESSION['error'], $_SESSION['success']);
     }
 
 }

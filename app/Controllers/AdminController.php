@@ -106,4 +106,48 @@ class AdminController extends Controller
         }
         Helper::redirect('create');
     }
+
+    /**
+     * Delete publication
+     */
+    public function getDelete($id)
+    {
+        if(App::get('dbModel')->delete('posts', $id)) {
+            Helper::redirect();
+        }
+    }
+
+    /**
+     * Edit publication page
+     * @param $id <p>post id</p>
+     */
+    public function getEdit($id)
+    {
+        $data = [
+            'title' => 'Edit post',
+            'description' => 'Updating post'
+        ];
+
+        $post = App::get('dbModel')->selectById('posts', $id);
+
+        $this->view->render('edit', compact('data', 'post'));
+    }
+
+    /**
+     * <p>Editing process
+     */
+    public function postMakeEdit()
+    {
+        $id = $_POST['id'];
+        $title = $_POST['title'];
+        $short_description = $_POST['short_description'];
+        $description = $_POST['description'];
+
+        if(!App::get('dbPost')->edit($title, $short_description, $description, $id)) {
+            $_SESSION['error'] = 'Error post editing.';
+        } else {
+            $_SESSION['success'] = 'The post has been edited successfully.';
+        }
+        Helper::redirect('edit/' . $id);
+    }
 }

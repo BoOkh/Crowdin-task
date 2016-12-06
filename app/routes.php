@@ -11,3 +11,6 @@ $router->get('logout', 'AdminController@getLogout');
 $router->get('create', 'AdminController@getCreate');
 $router->post('makeCreate', 'AdminController@postMakeCreate');
 $router->post('makeCreateUpload', 'AdminController@postMakeCreateUpload');
+$router->get('delete/([0-9]+)', 'AdminController@getDelete@$1');
+$router->get('edit/([0-9]+)', 'AdminController@getEdit@$1');
+$router->post('makeEdit', 'AdminController@postMakeEdit');

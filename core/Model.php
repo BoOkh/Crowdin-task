@@ -48,4 +48,19 @@ class Model
             echo $e->getMessage();
         }
     }
+
+    public function delete($table, $id)
+    {
+        try {
+            $sql = "DELETE FROM {$table} WHERE id = :id";
+
+            $statement = $this->pdo->prepare($sql);
+
+            $statement->bindParam(':id', $id, PDO::PARAM_INT);
+
+            return ($statement->execute()) ? true : false;
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+        }
+    }
 }

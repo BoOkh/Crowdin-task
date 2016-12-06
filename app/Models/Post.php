@@ -65,4 +65,22 @@ class Post extends Model
             echo $e->getMessage();
         }
     }
+
+    public function edit($title, $short_description, $description, $id)
+    {
+        try {
+            $sql = "UPDATE posts SET title = :title, short_description = :short_description, description = :description WHERE id = :id";
+
+            $statement = $this->pdo->prepare($sql);
+
+            $statement->bindParam(':title', $title, PDO::PARAM_STR);
+            $statement->bindParam(':short_description', $short_description, PDO::PARAM_STR);
+            $statement->bindParam(':description', $description, PDO::PARAM_STR);
+            $statement->bindParam(':id', $id, PDO::PARAM_INT);
+
+            return ($statement->execute()) ? true : false;
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+        }
+    }
 }
