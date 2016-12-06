@@ -1,8 +1,10 @@
 # Crowdin-task
 Result - <a href='crowdin.esy.es'>here</a>
 The data for authorization on the site:
-<b>Login: admin</b>
-<b>Password: pass23</b>
+<ul>
+<li><b>Login:</b> admin</li>
+<li><b>Password:</b> pass23</li>
+<ul>
 <h2>Installing</h2>
 <ol>
   <li>Enable Mode Rewrite</li>
@@ -16,7 +18,7 @@ The data for authorization on the site:
   <li>Import - <a href="https://github.com/BoOkh/Crowdin-task/blob/master/crowdin_20161206_232912.sql">sql</a></li>
 </ol>
 <h2>The site has been tested on:</h2>
-<ul style="list-style-type: none;">
+<ul>
 <li><b>OS:</b> Ubuntu 16.04</li>
 <li><b>Server:</b> Apache 2.0</li>
 <li><b>PHP:</b> 7.0.8</li>
