@@ -49,6 +49,12 @@ class Model
         }
     }
 
+    /**
+     * Delete field from database
+     * @param $table
+     * @param $id
+     * @return bool
+     */
     public function delete($table, $id)
     {
         try {

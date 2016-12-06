@@ -1,5 +1,6 @@
 <?php
 namespace App\Core;
+use App\Controllers\ErrorController;
 use Exception;
 /**
  * Class Router
@@ -77,7 +78,8 @@ class Router
             }
         }
         if ($checkError) {
-            throw new Exception('Controller does not exist.');
+            $error = new ErrorController();
+            $error->getErrorPage404();
         }
     }
 

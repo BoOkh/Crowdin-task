@@ -2,6 +2,7 @@
 $this->title = $post['title'];
 $this->metaDescription = $post['description'];
 ?>
+<?php if (isset($post) && $post && is_array($post)) :?>
 <div class="posts" id="post" post-id="<?= $post['id'] ?>">
     <div class="col-md-8 col-md-offset-2">
         <h2><?= $post['title'] ?></h2>
@@ -21,3 +22,10 @@ $this->metaDescription = $post['description'];
         </div>
     </div>
 </div>
+<?php else: ?>
+<div class="col-md-8 col-md-offset-2">
+    <div class="alert alert-danger" role="alert">
+        Sorry, this publication does not exist
+    </div>
+</div>
+<?php endif;?>
