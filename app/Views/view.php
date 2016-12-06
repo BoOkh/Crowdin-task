@@ -16,8 +16,8 @@ $this->metaDescription = $post['description'];
                 <?php if(isset($_SESSION['admin'])): ?>
                     <a href="/delete/<?= $post['id'] ?>" class="btn btn-warning"><span class="glyphicon glyphicon-trash">Delete</span></a>
                     <a href="/edit/<?= $post['id'] ?>" class="btn btn-info"><span class="glyphicon glyphicon-edit">Edit</span></a>
-                    <a class="btn btn-primary" id="download_post"><span class="glyphicon glyphicon-save">Download</span></a>
                 <?php endif;?>
+                    <a class="btn btn-primary" id="download_post"><span class="glyphicon glyphicon-save">Download</span></a>
             </div>
         </div>
     </div>
