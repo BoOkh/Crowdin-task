@@ -21,11 +21,11 @@ $this->metaDescription = $data['description'];
             </div>
             <div class="form-group">
                 <label for="short_description">Short description</label>
-                <input type="text" class="form-control" name="short_description" id="short_description" placeholder="Enter short description" required>
+                <textarea name="short_description" id="short_description" class="form-control" rows="3" placeholder="Enter short description" required></textarea>
             </div>
             <div class="form-group">
                 <label for="description">Description</label>
-                <input type="text" class="form-control" name="description" id="description" placeholder="Enter description" required>
+                <textarea name="description" id="description" class="form-control" rows="7" placeholder="Enter description" required></textarea>
             </div>
             <button type="submit" class="btn btn-primary">Create</button>
         </form>
