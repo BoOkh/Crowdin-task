@@ -4,6 +4,10 @@ namespace App\Controllers;
 use App\Core\{App, Controller, Helper};
 use App\Models\Admin;
 
+/**
+ * Class AdminController
+ * @package App\Controllers
+ */
 class AdminController extends Controller
 {
     public function __construct()
@@ -12,6 +16,9 @@ class AdminController extends Controller
         Admin::checkLogged();
     }
 
+    /**
+     * Login page
+     */
     public function getLogin()
     {
         $data = [
@@ -22,6 +29,9 @@ class AdminController extends Controller
         $this->view->render('login', compact('data'));
     }
 
+    /**
+     * Making login
+     */
     public function postMakeLogin()
     {
         $login = $_POST['login'];
@@ -37,12 +47,18 @@ class AdminController extends Controller
         }
     }
 
+    /**
+     * Making logout
+     */
     public function getLogout()
     {
         Admin::logout();
         Helper::redirect();
     }
 
+    /**
+     * Create a post
+     */
     public function getCreate()
     {
         $data = [
@@ -53,6 +69,9 @@ class AdminController extends Controller
         $this->view->render('create', compact('data'));
     }
 
+    /**
+     * Post creation
+     */
     public function postMakeCreate()
     {
         $title = $_POST['title'];
@@ -67,6 +86,9 @@ class AdminController extends Controller
         Helper::redirect('create');
     }
 
+    /**
+     * Upload file and create post
+     */
     public function postMakeCreateUpload()
     {
         $upload = file_get_contents($_FILES['post']['tmp_name']);

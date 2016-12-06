@@ -4,10 +4,20 @@ namespace App\Core;
 use PDO;
 use PDOException;
 
+/**
+ * Class Model
+ * @package App\Core
+ */
 class Model
 {
+    /**
+     * Count publications per page
+     */
     const SHOW_ON_PAGE = 3;
 
+    /**
+     * @var $pdo <p>PDO object(contain connection to database)</p>
+     */
     protected $pdo;
 
     public function __construct($pdo)
@@ -15,6 +25,12 @@ class Model
         $this->pdo = $pdo;
     }
 
+    /**
+     * Select post by id
+     * @param $table
+     * @param $id
+     * @return mixed
+     */
     public function selectById($table, $id)
     {
         try {
@@ -27,7 +43,7 @@ class Model
 
             $statement->execute();
 
-            return $statement->fetch(); //PDO::FETCH_CLASS - inside fetch
+            return $statement->fetch();
         } catch (PDOException $e) {
             echo $e->getMessage();
         }

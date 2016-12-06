@@ -1,9 +1,16 @@
 <?php
 
 namespace App\Core;
-
+/**
+ * Class Request
+ * @package App\Core
+ */
 class Request
 {
+    /**
+     * <p>Get current URI</p>
+     * @return string
+     */
     public static function uri()
     {
         return trim(
@@ -11,6 +18,10 @@ class Request
         );
     }
 
+    /**
+     * Get http method(It's for Router)
+     * @return mixed
+     */
     public static function method()
     {
         return $_SERVER['REQUEST_METHOD'];

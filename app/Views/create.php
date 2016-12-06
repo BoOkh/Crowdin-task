@@ -14,11 +14,6 @@ $this->metaDescription = $data['description'];
     </div>
     <div class="col-md-4 col-md-offset-2">
         <h3>Enter post</h3>
-        <?php if(isset($_SESSION['error']) && $_SESSION['error']):?>
-            <div class="alert alert-danger" role="alert">
-                <strong>Oops! </strong><?=$_SESSION['error']; unset($_SESSION['error'])?>
-            </div>
-        <?php endif;?>
         <form action="/makeCreate" method="POST">
             <div class="form-group">
                 <label for="title">Title</label>
@@ -45,5 +40,12 @@ $this->metaDescription = $data['description'];
             </div>
             <button type="submit" class="btn btn-primary">Create</button>
         </form>
+    </div>
+    <div class="col-md-8 col-md-offset-2">
+        <?php if(isset($_SESSION['error']) && $_SESSION['error']):?>
+            <div class="alert alert-danger" role="alert" style="margin-top: 15px">
+                <strong>Oops! </strong><?=$_SESSION['error']; unset($_SESSION['error'])?>
+            </div>
+        <?php endif;?>
     </div>
 <?php endif;?>

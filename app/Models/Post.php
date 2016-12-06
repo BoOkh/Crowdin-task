@@ -5,6 +5,10 @@ use App\Core\Model;
 use PDO;
 use PDOException;
 
+/**
+ * Class Post
+ * @package App\Models
+ */
 class Post extends Model
 {
     public function __construct($pdo)
@@ -12,6 +16,12 @@ class Post extends Model
         parent::__construct($pdo);
     }
 
+    /**
+     * <p>Select partial publications</p>
+     * @param $table
+     * @param int $page
+     * @return mixed
+     */
     public function selectPartially($table, $page = 1)
     {
         $limit = self::SHOW_ON_PAGE;
@@ -33,6 +43,13 @@ class Post extends Model
         return $statement->fetchAll();
     }
 
+    /**
+     * Create new publication
+     * @param $title
+     * @param $short_description
+     * @param $description
+     * @return bool
+     */
     public function create($title, $short_description, $description)
     {
         try {
