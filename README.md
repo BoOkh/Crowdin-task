@@ -4,7 +4,7 @@ The data for authorization on the site:
 <ul>
 <li><b>Login:</b> admin</li>
 <li><b>Password:</b> pass23</li>
-<ul>
+</ul>
 <h2>Installing</h2>
 <ol>
   <li>Enable Mode Rewrite</li>
