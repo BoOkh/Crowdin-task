@@ -1,10 +1,12 @@
 # Crowdin-task
 Result - <a href='http://crowdin.esy.es'>here</a>
+<p>
 The data for authorization on the site:
 <ul>
 <li><b>Login:</b> admin</li>
 <li><b>Password:</b> pass23</li>
 </ul>
+</p>
 <h2>Installing</h2>
 <ol>
   <li>Enable Mode Rewrite</li>
