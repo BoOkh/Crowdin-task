@@ -1,5 +1,5 @@
 # Crowdin-task
-Result - <a href='crowdin.esy.es'>here</a>
+Result - <a href='http://crowdin.esy.es'>here</a>
 The data for authorization on the site:
 <ul>
 <li><b>Login:</b> admin</li>
